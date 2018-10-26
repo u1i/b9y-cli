@@ -1,2 +1,9 @@
-build
-dist
+bin/
+include/
+lib/
+share/
+.Python
+pip-selfcheck.json
+*.pyc
+.DS_Store
+man/
