@@ -2,7 +2,7 @@
 
 # b9y-cli - Commandline Client
 
-A client for [Bamblweeny](https://github.com/u1i/bambleweeny) for the command line.
+A client for [Bambleweeny](https://github.com/u1i/bambleweeny) for the command line.
 
 ## Install
 
