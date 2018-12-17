@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: b9y-cli
-Version: 0.1.30
+Version: 0.1.31
 Summary: Commandline Interface for Bambleweeny
 Home-page: https://github.com/u1i/b9y-cli
 Author: Uli Hitzel
@@ -10,7 +10,7 @@ Description: ![](https://raw.githubusercontent.com/u1i/bambleweeny/master/img/bw
         
         # b9y-cli - Commandline Client
         
-        A client for [Bamblweeny](https://github.com/u1i/bambleweeny) for the command line.
+        A client for [Bambleweeny](https://github.com/u1i/bambleweeny) for the command line.
         
         ## Install
         
