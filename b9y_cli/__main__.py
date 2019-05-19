@@ -6,7 +6,7 @@ from cmd import Cmd
 from b9y import B9y
 #from b9y_dev import B9y
 
-b9y_cli_release = "0.1.32"
+b9y_cli_release = "0.1.33"
 default_user = "admin"
 default_password = "changeme"
 default_host="http://localhost:8080"
@@ -194,14 +194,6 @@ b9y-cli -h http://b9y.myhost.com:8080 -u user1 -p
         r = self.b9y.get(items[0])
         output(r)
 
-    def do_uget(self, inp):
-        items = shlex.split(inp, posix=False)
-        if len(items) != 2:
-            output("Error: need exactly two arguments.")
-            return(None)
-        r = self.b9y.uget(items[0], items[1])
-        output(str(r))
-
     def do_keys(self, inp):
         items = shlex.split(inp, posix=False)
         if len(items) == 0:
@@ -251,9 +243,6 @@ b9y-cli -h http://b9y.myhost.com:8080 -u user1 -p
 
     def help_get(self):
         output("Get a Key. Example: get foo")
-
-    def help_uget(self):
-        output("** for admin use** Get a Key from a userid. Example: get foo 1")
 
     def help_push(self):
         output("Adds a value to a list / queue. Example: push foo bar")
