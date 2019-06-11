@@ -6,7 +6,7 @@ from cmd import Cmd
 from b9y import B9y
 #from b9y_dev import B9y
 
-b9y_cli_release = "0.1.33"
+b9y_cli_release = "0.1.34"
 default_user = "admin"
 default_password = "changeme"
 default_host="http://localhost:8080"
@@ -148,6 +148,18 @@ b9y-cli -h http://b9y.myhost.com:8080 -u user1 -p
         if r:
             output("OK")
 
+    def do_del(self, inp):
+        items = shlex.split(inp, posix=False)
+        if len(items) != 1:
+            output("Error: need exactly one argument.")
+            return(None)
+        try:
+            r = self.b9y.delete(items[0])
+            if r:
+                output("OK")
+        except:
+            output("Error")
+
     def do_route(self, inp):
         items = shlex.split(inp, posix=False)
         if len(items) != 2:
@@ -216,6 +228,9 @@ b9y-cli -h http://b9y.myhost.com:8080 -u user1 -p
 
     def help_set(self):
         output("Set a Key. Example: set foo bar")
+
+    def help_del(self):
+        output("Delete a Key. Example: del foo")
 
     def help_create_user(self):
         output("** for admin use** Create a User. Example: create_user user1 secret")

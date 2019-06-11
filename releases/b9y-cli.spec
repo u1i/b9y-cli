@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['b9y-cli.py'],
-             pathex=['/home/uli/projects/b9y-cli/releases'],
+             pathex=['/Users/uli/Projects/b9y-cli/releases'],
              binaries=[],
              datas=[],
              hiddenimports=[],
